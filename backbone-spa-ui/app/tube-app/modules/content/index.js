@@ -4,6 +4,7 @@ module.exports = (function () {
     var Module = require('appCommon/');
     var ContentView = require('./views/contentView');
     var ContentRouter = require('./router/contentRouter');
+    var AboutChannelModule = require('appModules/aboutChannel/');
     var VideoListModule = require('appModules/videoList/');
     var DetailsModule = require('appModules/details/');
 
@@ -25,6 +26,10 @@ module.exports = (function () {
             {
                 module: DetailsModule,
                 weight: 9
+            },  
+            {
+                module: AboutChannelModule,
+                weight: 10
             }
         ],
         switchable: false

@@ -99,7 +99,7 @@ module.exports = (function () {
         }
     };
 
-    Module.prototype.setViewLoad = function (value) {
+    Module.prototype.setViewLoad = function (value, param) {
         if (value != false) {
             this.trigger(this.parentModule + ':changeView', this.name);
         }
@@ -107,6 +107,7 @@ module.exports = (function () {
         var elem = this['layoutView'];
         var Element = elem.constructor;
         var options = elem.options || {};
+        _.extend(options, param);
         this['layoutView'] = new Element(options);
     };
 

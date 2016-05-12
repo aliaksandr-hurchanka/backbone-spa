@@ -12,7 +12,7 @@
                     <li><a href="#">Playlists</a></li>
                     <li><a href="#">Channels</a></li>
                     <li><a href="#">Discussion</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#channel/<%= id %>/about">About</a></li>
                 </ul>
             </div>
             <div class="select-view-list">

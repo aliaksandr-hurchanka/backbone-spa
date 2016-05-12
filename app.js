@@ -41,7 +41,23 @@ var videos = new Schema({
     }
 });
 
+var channels = new Schema({
+    category: {
+        type: String,
+    },
+    description: {
+        type: String
+    },
+    name: {
+        type: String
+    },
+    _id: {
+        type: String
+    }
+});
+
 var Videos = mongoose.model('videos', videos);
+var Channels = mongoose.model('channels', channels);
 
 app.use('/build', express.static(bundlePath));
 app.use('/static', express.static(staticPath));
@@ -89,6 +105,18 @@ app.get("/channels", function (req, res) {
 app.get("/channel/:id/videos/:idVideo", function (req, res) {
     console.log('params ', req.params);
     Videos.findById(req.params.idVideo, function (err, docs) {
+        if (err) {
+            handleError(res, err.message, "Failed to get videos.");
+        } else {
+            console.log('>>> ', docs);
+            res.status(200).json(docs);
+        }
+    });
+});
+
+app.get("/channel/:id/about", function (req, res) {
+    console.log('params ', req.params);
+    Channels.findById(req.params.id, function (err, docs) {
         if (err) {
             handleError(res, err.message, "Failed to get videos.");
         } else {

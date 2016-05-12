@@ -14,6 +14,7 @@ module.exports = (function () {
         itemTemplate: GridTemplate,
         initialize: function (options) {
             _.extend(this, options);
+            console.log('OPTIONS -> ', options);
             this.collection = new VideoListCollection();
             this.listenTo(Backbone.Events, 'Channel:video', this.listVideosLoad);
             this.listenTo(this.collection, 'sync', this.onCollectionSync);
@@ -25,7 +26,7 @@ module.exports = (function () {
             if (!id) {
                 var id = this.collection.toJSON()[0].channel;
             }
-            this.$el.html(this.template());
+            this.$el.html(this.template({id:id}));
             this.collection.each(function (item) {
                 if (item.toJSON().channel == id) {
                     this.$el.find('#item-article')
@@ -62,7 +63,7 @@ module.exports = (function () {
             this.listVideosLoad();
         },
         render: function () {
-            this.$el.html(this.template());
+            this.$el.html(this.template({id: this.id}));
             this.trigger('render:complite');
             return this;
         }

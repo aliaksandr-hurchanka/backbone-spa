@@ -1,27 +1,28 @@
 {
-    "name": "backbone-spa",
-    "version": "0.0.1",
-    "description": "Sample Backbone application with Karma tests",
-    "main": "app.js",
-    "private": true,
-    "scripts": {
-        "npm start": "node app"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/f3arnil/backbone-spa.git"
-    },
-    "author": "Alex Vasilyeu",
-    "license": "ISC",
-    "dependencies": {
-        "express": "^4.13.4",
-        "extract-text-webpack-plugin": "^1.0.1",
-        "path": "^0.12.7",
-        "mongoose": "4.2.x",
-        "mongoose-unique-validator": "*"
-    },
-    "bugs": {
-        "url": "https://github.com/f3arnil/backbone-spa/issues"
-    },
-    "homepage": "https://github.com/f3arnil/backbone-spa#readme"
+  "name": "backbone-spa",
+  "version": "0.0.1",
+  "description": "Sample Backbone application with Karma tests",
+  "main": "app.js",
+  "private": true,
+  "scripts": {
+    "npm start": "node app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f3arnil/backbone-spa.git"
+  },
+  "author": "Alex Vasilyeu",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "mongoose": "^4.2.10",
+    "mongoose-unique-validator": "*",
+    "path": "^0.12.7"
+  },
+  "bugs": {
+    "url": "https://github.com/f3arnil/backbone-spa/issues"
+  },
+  "homepage": "https://github.com/f3arnil/backbone-spa#readme"
 }

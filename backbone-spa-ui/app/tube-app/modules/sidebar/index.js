@@ -3,7 +3,7 @@ module.exports = (function () {
 
     var Module = require('appCommon/');
     var SideBarView = require('./views/sideBarView');
-    var SideBarRouter = require('./router/sideBarRouter');
+    //var SideBarRouter = require('./router/sideBarRouter');
     var MainMenuModule = require('./mainMenu-module/');
     var ChannelsModule = require('./channels-module/');
 
@@ -13,10 +13,10 @@ module.exports = (function () {
             constructor: SideBarView,
             options: {}
         },
-        router: {
-            constructor: SideBarRouter,
-            options: {}
-        },
+        // router: {
+        //     constructor: SideBarRouter,
+        //     options: {}
+        // },
         switchable: false,
         modules: [
             {

@@ -357,7 +357,7 @@ textarea {
     width: 100%;
 }
 .details-right-panel a {
-    height: 100px;
+    /*height: 100px;*/
 }
 .details-right-panel img {
     float: left;
@@ -383,7 +383,7 @@ p.list-group-item-heading {
     text-align: left;
 }
 .details-info {
-    width: 854px;
+    width: auto;
 }
 .details-comments {
     background: #fff;
@@ -433,4 +433,7 @@ p.list-group-item-heading {
     margin-bottom: 20px;
     text-decoration: none;
     list-style: none;
+}
+.about {
+    margin-left: 250px;
 }
