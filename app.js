@@ -133,3 +133,12 @@ app.get('/', function (request, response) {
 app.get('/tube-app', function (req, res) {
     res.sendFile(uiRootDir + '/app/tube-app/index.html');
 });
+
+app.get('/', function (request, response) {
+    response.redirect('/admin-app');
+});
+
+app.get('/admin-app', function (req, res) {
+    res.sendFile(uiRootDir + '/app/admin-app/index.html');
+});
+
