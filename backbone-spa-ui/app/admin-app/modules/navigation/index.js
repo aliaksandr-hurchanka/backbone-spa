@@ -9,7 +9,8 @@ module.exports = (function () {
         layoutView: {
             constructor: NavigationView,
             options: {}
-        }
+        },
+        switchable: true
     })
 
     return NavigationModule;

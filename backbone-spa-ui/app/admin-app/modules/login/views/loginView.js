@@ -3,6 +3,7 @@ module.exports = (function () {
 
     var CustomView = require('appCommon/customView');
     var loginViewTpl = require('tpl!../templates/login');
+    //var router = require('../../../router.js');
 
     var LoginView = CustomView.extend({
         el: '#login',
@@ -10,6 +11,15 @@ module.exports = (function () {
         initialize: function (options) {
             _.extend(this,options);
             this.render();
+        },
+        events: {
+            'click .btn-login': 'clickOpenDashboard'
+        },
+        clickOpenDashboard: function (event) {
+            event.preventDefault();
+            Backbone.history.navigate('dashboard', {
+                trigger: true
+            });
         },
         render: function () {
             this.$el.html(this.template);

@@ -3,13 +3,19 @@ module.exports = (function () {
 
     var AdminRouter = Backbone.Router.extend({
         routes: {
-            '': 'administrator',
+            '': 'login',
+            'dashboard': 'loadDashboard'
         },
         initialize: function () {
-            console.log('Initialize in AdminRouter');
+            console.log('Initialize in Login form');
         },
         administrator: function () {
-            console.log('Index in AdminRouter');
+            console.log('Index in Login');
+        },
+        loadDashboard: function () {
+            Backbone.Events.trigger('login:destroy');
+            Backbone.Events.trigger('navigation:load');
+            Backbone.Events.trigger('adminContent:load');
         }
     });
 
