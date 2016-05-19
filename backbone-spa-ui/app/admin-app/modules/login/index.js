@@ -1,17 +1,17 @@
 module.exports = (function () {
     'use strict';
 
-    var NavigationView = require('./views/navigationView');
+    var LoginView = require('./views/loginView');
     var Module = require('appCommon/');
 
     var NavigationModule = Module.extend({
-        name: 'navigation',
+        name: 'login',
         layoutView: {
-            constructor: NavigationView,
+            constructor: LoginView,
             options: {}
         }
     })
 
-    return NavigationModule;
+    return LoginModule;
 
 })();

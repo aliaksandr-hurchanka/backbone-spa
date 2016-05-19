@@ -2,11 +2,11 @@ module.exports = (function () {
     'use strict';
 
     var CustomView = require('appCommon/customView');
-    var navigationViewTpl = require('tpl!../templates/navigation');
+    var loginViewTpl = require('tpl!../templates/login');
 
-    var HeaderView = CustomView.extend({
-        el: '#navigation',
-        template: navigationViewTpl,
+    var LoginView = CustomView.extend({
+        el: '#login',
+        template: loginViewTpl,
         initialize: function (options) {
             _.extend(this,options);
             this.render();
@@ -17,6 +17,6 @@ module.exports = (function () {
         }
     });
 
-    return HeaderView;
+    return LoginView;
 
 })();
