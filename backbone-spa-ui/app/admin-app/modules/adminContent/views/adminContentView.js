@@ -13,6 +13,7 @@ module.exports = (function () {
         },
         render: function () {
             this.$el.html(this.template);
+            Backbone.Events.trigger('channelsAdmin:load');
             return this;
         }
     });

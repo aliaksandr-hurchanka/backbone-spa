@@ -3,7 +3,7 @@ module.exports = (function () {
 
     var Module = require('appCommon/');
     var AdminContentView = require('./views/adminContentView')
-    //var ChannelListModule = require('../modules/channelList')
+    var ChannelsAdminModule = require('../channelsAdminList')
 
     var AdminContentModule = Module.extend({
         name: 'adminContent',
@@ -11,16 +11,16 @@ module.exports = (function () {
             constructor: AdminContentView,
             options: {}
         },
-//        modules: [
-//            {
-//                module: ChannelListModule,
-//                weight: 8
-//            }
-//        ],
+        modules: [
+             {
+                 module: ChannelsAdminModule,
+                 weight: 8
+             }
+         ],
         switchable: true
     })
 
-    
+
     return AdminContentModule;
 
 })();
